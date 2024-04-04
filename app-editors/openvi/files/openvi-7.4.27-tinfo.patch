@@ -1,0 +1,13 @@
+diff --git a/GNUmakefile b/GNUmakefile
+index 59e8b70..4a960f1 100644
+--- a/GNUmakefile
++++ b/GNUmakefile
+@@ -111,7 +111,7 @@ ifeq ($(OS),netbsd)
+       endif # clang
+    endif # LTO
+ else # !netbsd
+-   CURSESLIB ?= -lncurses
++   CURSESLIB ?= -lncurses -ltinfo
+ endif # netbsd
+ ifeq ($(OS),aix)
+    MAIXBITS ?= $(shell command -p $(GETCONF) KERNEL_BITMODE 2> /dev/null || \
